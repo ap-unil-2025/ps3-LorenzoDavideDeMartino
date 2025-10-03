@@ -48,7 +48,14 @@ def analyze_numbers(numbers):
         else :
             odd_count.append(i) 
 
-    analysis.update({"count":counts, "sum":Sum, "average":Average, "minimum":Minimum, "maximum":Maximum, "even_count":even_count, "odd_count":odd_count})
+    analysis.update({"count":counts, 
+                     "sum":Sum,
+                     "average":Average,
+                     "minimum":Minimum,
+                     "maximum":Maximum,
+                     "even_count":even_count,
+                     "odd_count":odd_count
+                     })
 
     # Your code here
     return analysis
@@ -58,7 +65,7 @@ def display_analysis(analysis):
     Display the analysis in a formatted way.
     """
     # Your code here
-    print(analysis) 
+    print(analysis)
     pass
 
 def main():

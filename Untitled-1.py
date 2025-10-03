@@ -2,12 +2,10 @@ def create_sample_file(filename="sample.txt"):
     """
     Create a sample text file for testing.
     """
-    content = """
-    Python is a powerful programming language.
-    It is widely used in web development, data science, and automation.
-    Python's simple syntax makes it great for beginners.
-    Many companies use Python for their projects.
-    """
+    content = """Python is a powerful programming language.
+It is widely used in web development, data science, and automation.
+Python's simple syntax makes it great for beginners.
+Many companies use Python for their projects."""
 
     with open(filename, 'w') as f:
         f.write(content)
@@ -49,7 +47,7 @@ def find_longest_word(filename):
     with open(filename, 'r') as f:
         content = f.read()
         words = content.split()
-
+        # Enlever la ponctuation de chaque mot
         import string
         words_clean = [word.strip(string.punctuation) for word in words]
         longest = max(words_clean, key=len)
@@ -64,14 +62,14 @@ def word_frequency(filename):
     
     with open(filename, 'r') as f:
         content = f.read()
-        
+        # Mettre en minuscules
         content = content.lower()
-        
+        # Enlever la ponctuation
         content = content.translate(str.maketrans('', '', string.punctuation))
-        
+        # Séparer en mots
         words = content.split()
         
-        
+        # Compter la fréquence
         frequency = {}
         for word in words:
             if word in frequency:
@@ -97,7 +95,7 @@ def analyze_file(filename):
 
         print("\nTop 5 most common words:")
         freq = word_frequency(filename)
-       
+        # Sort by frequency and get top 5
         top_words = sorted(freq.items(), key=lambda x: x[1], reverse=True)[:5]
         for word, count in top_words:
             print(f"  '{word}': {count} times")
