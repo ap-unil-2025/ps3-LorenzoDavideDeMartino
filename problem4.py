@@ -28,7 +28,11 @@ def count_lines(filename):
     """
     with open(filename, 'r') as f:
         lines = f.readlines()
-        return len(lines)
+        count = 0
+        for line in lines:
+            if line.strip() != "":
+                count += 1
+        return count
 
 def count_characters(filename, include_spaces=True):
     """
