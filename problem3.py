@@ -1,9 +1,5 @@
 import statistics
 def get_numbers_from_user():
-    """
-    Get numbers from user until they type 'done'.
-    Return a list of numbers.
-    """
     numbers = []
     # Your code here
     user = 0 
@@ -19,16 +15,6 @@ def get_numbers_from_user():
     return numbers
 
 def analyze_numbers(numbers):
-    """
-    Analyze the list and return a dictionary with:
-    - count: number of elements
-    - sum: sum of all numbers
-    - average: average value
-    - minimum: smallest number
-    - maximum: largest number
-    - even_count: count of even numbers
-    - odd_count: count of odd numbers
-    """
     if not numbers:
         return None
 
